@@ -44,18 +44,23 @@ function App() {
   return (
     <>
       <div className={styles.container}>
+        <h2>Users in the database</h2>
         {promiseInProgress ? (
           <LoadingIndicator />
         ) : currentUserData ? (
           <div className={styles["user-container"]}>
-            Information about current User
+            <span style={{ paddingBottom: "20px" }}>
+              <h3>Information about current User</h3>
+            </span>
             <img
               src={currentUserData.avatar}
               alt=""
-              style={{ height: "200px", width: "200px" }}
+              style={{ height: "300px", borderRadius: "20px" }}
             />
-            <span>{currentUserData.first_name}</span>
-            <span>{currentUserData.last_name}</span>
+            <span style={{ paddingTop: "10px" }}>
+              {currentUserData.first_name} {currentUserData.last_name}
+            </span>
+            <span></span>
             <span>{currentUserData.email}</span>
           </div>
         ) : (

@@ -1,0 +1,26 @@
+.container {
+  padding: 10rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.spinner {
+  color: rgb(229, 231, 235);
+  height: 50px;
+  width: 50px;
+  fill: #1c64f2;
+}
+
+.animationspin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
